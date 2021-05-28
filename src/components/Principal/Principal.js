@@ -10,7 +10,6 @@ const Principal =()=>{
         history.push('/orders');        
     }
 
-
     return(
         <div className='viewPrincipal'>
             <Navbar/>

@@ -3,12 +3,13 @@ import 'firebase/auth'
 import 'firebase/firestore'
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyB6Jb8hopHSEIHSb4U-yyXPiuBKDe8_M2E',
-    authDomain: 'remember-me-d927f.firebaseapp.com',
-    projectId: 'remember-me-d927f',
-    storageBucket: 'remember-me-d927f.appspot.com',
-    messagingSenderId: '390656546926',
-    appId: '1:390656546926:web:92eca780f097f7d45cee7f'
+    apiKey: "AIzaSyBKw2NHPMOXtlVqBFM6RLnjIWBisBN6r90",
+    authDomain: "pickup-vtex.firebaseapp.com",
+    projectId: "pickup-vtex",
+    storageBucket: "pickup-vtex.appspot.com",
+    messagingSenderId: "1019913078929",
+    appId: "1:1019913078929:web:6f6878a7240e63dd5e5730",
+    measurementId: "G-G6WPSMG4YS"
 };
 
 const fb = firebase.initializeApp(firebaseConfig);
