@@ -9,7 +9,7 @@ function UserOrders() {
             <Navbar />
             <div className='conteiner-userorders'>
                 <div className="my-orders">
-                    <h1>Mis pedidos</h1>
+                    <h2>Mis pedidos</h2>
                 </div>
                 <section>
                     <div className="conteiner-orders">

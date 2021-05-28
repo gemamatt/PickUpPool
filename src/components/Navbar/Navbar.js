@@ -11,7 +11,8 @@ const Navbar =()=>{
 
     return(
         <div className='navbar'>
-            <img onClick={handleClick} src={arrow} className="return" alt="return" />            
+            <img onClick={handleClick} src={arrow} className="return" alt="return" />
+            <p>PickUp PooL</p>
         </div>
     )
 }
