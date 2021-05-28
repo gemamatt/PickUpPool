@@ -18,6 +18,7 @@ const Navbar =()=>{
         <div className='navbar'>
             <img onClick={handleClick} src={arrow} className="return" alt="return" />
             <button onClick={handleLogout}>Salir</button>       
+            <p>PickUp PooL</p>
         </div>
     )
 }

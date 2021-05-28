@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import UserOrders from './components/Orders/UserOrders';
 import Principal from './components/Principal/Principal';
+import DetailOrder from './components/Orders/DetailOrder'
 import { Register } from './components/Register/Register';
 import { Login } from './components/Login/Login';
 
@@ -36,11 +37,14 @@ function App() {
           <Route exact path='/'>
             <Login user={user} />
           </Route>
+          <Route path='/details'>
+            <DetailOrder />
+          </Route>
         </Switch>
       </div>
     </Router>
-     ): <p>Cargando...</p>}
-     </>
+    ): <p>Cargando...</p>}
+    </>
   );
 }
 export default App;
