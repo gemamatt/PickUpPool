@@ -26,7 +26,7 @@ export const Login = (props) => {
     }
 
     return (
-            <div className="login">
+        <div className="login">
             <h1>PickUp PooL</h1>
                     <p>Tu app de entrega de pedidos</p>
                     <img className="logo" src={Logo} alt="logo" />

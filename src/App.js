@@ -26,13 +26,13 @@ function App() {
       <div className="App">
         <Switch>
           <Route path='/principal'>
-            <Principal />
+            <Principal user={user}/>
           </Route>
           <Route path='/register'>
             <Register />
           </Route>
           <Route path='/orders'>
-            <UserOrders />
+            <UserOrders user={user}/>
           </Route>
           <Route exact path='/'>
             <Login user={user} />
