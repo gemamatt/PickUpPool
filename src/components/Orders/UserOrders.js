@@ -1,9 +1,15 @@
 import React from 'react'
+import { Redirect } from 'react-router'
 import Navbar from '../Navbar/Navbar'
 import OneOrder from './OneOrder'
 import './UserOrders.css'
 
-function UserOrders() {
+function UserOrders(props) {
+
+    if(!props.user){
+        return <Redirect to="/"/>
+    }
+
     return (
         <>
             <Navbar />
