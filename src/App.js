@@ -25,7 +25,7 @@ function App() {
             <Login />
           </Route>
         </Switch>
-        </div>
+      </div>
     </Router>
   );
 }
