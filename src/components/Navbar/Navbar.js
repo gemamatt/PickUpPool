@@ -1,10 +1,17 @@
 import arrow from '../../assets/back.png';
 import './Navbar.css';
+import { useHistory } from 'react-router-dom'
 
 const Navbar =()=>{
+    let history = useHistory();
+
+    function handleClick() {
+        history.push('/principal');
+    }
+
     return(
         <div className='navbar'>
-            <img src={arrow} className="return" alt="return" />            
+            <img onClick={handleClick} src={arrow} className="return" alt="return" />            
         </div>
     )
 }
