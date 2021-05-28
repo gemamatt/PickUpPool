@@ -28,20 +28,20 @@ export const Login = (props) => {
     return (
         <div className="login">
             <h1>PickUp PooL</h1>
-            <p>Tu app de entrega de pedidos</p>
-            <img className="logo" src={Logo} alt="logo" />
-            <div className="loginDivForm">
-                <h3>INICIA SESIÓN</h3>
-                <form className="loginForm"onSubmit={handleSubmit}> 
-                    <label htmlFor="email">Correo electrónico*</label>
-                    <input id="email" type="email" className="loginInput"value={inputs.email} onChange={handleOnChange} placeholder="Correo electrónico"/>
-                    <label htmlFor="password">Contraseña</label>
-                    <input id="password" type="password" className="loginInput" value={inputs.password} onChange={handleOnChange} placeholder="Contraseña"/>
-                    <input type="submit" value="Ingresar" className="loginButton" />
-                </form>
-                <p>¿Aún no tienes cuenta?</p>
-                <Link to="/register" className="registerLink">Registrate</Link>
-            </div>  
-        </div>
+                    <p>Tu app de entrega de pedidos</p>
+                    <img className="logo" src={Logo} alt="logo" />
+                    <div className="loginDivForm">
+                    <h3>INICIA SESIÓN</h3>
+                        <form className="loginForm"onSubmit={handleSubmit}> 
+                        <label htmlFor="email">Correo electrónico*</label>
+                        <input id="email" type="email" className="loginInput"value={inputs.email} onChange={handleOnChange} placeholder="Correo electrónico"/>
+                        <label htmlFor="password">Contraseña*</label>
+                        <input id="password" type="password" className="loginInput" value={inputs.password} onChange={handleOnChange} placeholder="Contraseña"/>
+                        <input type="submit" value="Ingresar" className="loginButton" />
+                    </form>
+                    <p>¿Aún no tienes cuenta?</p>
+                    <Link to="/register" className="registerLink">Registrate</Link>
+                </div>  
+            </div>
     )
 };

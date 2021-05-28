@@ -3,6 +3,7 @@ import '../../components/Register/Register.css'
 import { auth } from '../../firebase'
 import Logo from '../../LogoPickUp.png'
 import {Link} from 'react-router-dom'
+import arrow from '../../assets/back.png';
 
 export const Register = () => {
 
@@ -24,7 +25,7 @@ export const Register = () => {
         }
     return (
         <div className='register'>
-            <h1>PickUp PooL</h1>
+            <h1 className='title'>PickUp PooL</h1>
             <p>Tu app de entrega de pedidos</p>
             <img className="logo" src={Logo} alt="logo" />
                 <div className="registerDivForm">
@@ -34,7 +35,7 @@ export const Register = () => {
                         <input type="email" className="registerInput" onChange={(e)=>{setEmail(e.target.value)}} />
                         <label htmlFor="password">Contraseña</label>
                         <input type="password" className="registerInput" onChange={(e)=>{setPassword(e.target.value)}} />
-                        <button value="regUser"  className="registerButton" >UNIRME</button>
+                        <button value="regUser"  className="registerButton" >Unirme</button>
                     </form>
                     {
                             msgError !== null ?
@@ -46,7 +47,7 @@ export const Register = () => {
                                 <span></span>
                             )
                             }
-                    <Link to="/">X</Link>
+                    <Link to="/"><img src={arrow} className="arrowBack" alt="back" /></Link>
                 </div>  
             </div>
     );
