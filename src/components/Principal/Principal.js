@@ -1,7 +1,16 @@
 import './Principal.css';
 import Navbar from '../Navbar/Navbar'
+import { useHistory } from 'react-router-dom'
 
 const Principal =()=>{
+    
+    let history = useHistory();
+
+    function handleClick() {
+        history.push('/orders');        
+    }
+
+
     return(
         <div className='viewPrincipal'>
             <Navbar/>
@@ -10,7 +19,7 @@ const Principal =()=>{
             <div className='categories'>
                 <div className='container'>
                     <h4>Mis pedidos</h4>
-                    <button>Ir</button>
+                    <button onClick={handleClick}>Ir</button>
                 </div>
                 <div className='container'>
                     <h4>Invita a un amigo para recibir créditos</h4>
