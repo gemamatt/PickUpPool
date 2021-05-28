@@ -2,32 +2,48 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .conteiner-orders {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
-    height: 466px;
+    width: 90%;
+    height: 1150px;
     background: #fff3f6;
     border: 1px solid #717786;
     box-sizing: border-box;
     border-radius: 5px;
+    margin-top: 4px;
 }
 
-.my-orders h2{
-    color: #142032;
+.conteiner-userorders h1{
+    margin: 0px;
 }
 
 /* Component OneOrder  */
+.ordersDad{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
-.one-order{
-    width: 260px;
-    height: 60px;
+.ordersBoy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    height: 53px;
     background: #FFFFFF;
     border: 3px solid #717786;
     box-sizing: border-box;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 13px;
+}
+
+.ordersBoy p {
+    font-size: small;
+    margin: 0px;
 }
