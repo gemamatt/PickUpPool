@@ -1,0 +1,18 @@
+.review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.container-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background: #fff3f6;
+    border: 1px solid #717786;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 4px;
+}
