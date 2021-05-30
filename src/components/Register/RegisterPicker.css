@@ -7,11 +7,9 @@
     align-items: center;
     color: #142032;
 }
-
 h1{
     margin-bottom: 5px;
 }
-
 .registerPick p{
     font-weight: bold;
     margin-top: -18px;
@@ -60,17 +58,14 @@ h1{
     font-size: larger;
     text-align: center;
 }
-
 .radioButtom{
     display: flex;
     margin-bottom: 7px;
     flex-direction: column;
 }
-
 .radioButtomOne{
     width: 100%;
 }
-
 .radioButtomTwo{
     width: 100%;
 }

@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { db } from '../../firebase';
-
 export const PickerCancel = () =>{
-
     const[commit, setCommit] = useState('');
-
     const commitCancelation = async (e) =>{
         const newCancelation = {
            commit: commit
@@ -17,8 +14,6 @@ export const PickerCancel = () =>{
             console.log('No exitoso', error)
         }
     };
-
-
     return(
         <div className="cancelContainer">
             <h1>¿Por qué estás cancelando la entrega?</h1>
