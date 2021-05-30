@@ -1,0 +1,15 @@
+.star{
+    width: 20px;
+    height: 20px;
+    margin: 0 3px;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    margin: 0 3px;
+    fill: rgb(189, 184, 184);
+}
+svg:hover {
+    fill: #FFE600;
+}
