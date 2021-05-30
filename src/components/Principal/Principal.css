@@ -37,24 +37,3 @@
     color: white;
     font-family: 'Mitr', sans-serif;
 }
-
-
-h3{
-    margin-top: 0;
-    font-weight: normal;
-    color: #F71963;
-}
-
-.container h4{
-    margin: 20px 20px 10px 20px;
-    font-weight: normal;
-}
-
-.container button{
-    background: #F71963;
-    border-radius: 7px;
-    padding: 5px 10px;
-    font-size: 16px;
-    color: white;
-    font-family: 'Mitr', sans-serif;
-}
