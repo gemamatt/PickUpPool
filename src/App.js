@@ -7,6 +7,8 @@ import Principal from './components/Principal/Principal';
 import DetailOrder from './components/Orders/DetailOrder'
 import { Register } from './components/Register/Register';
 import { Login } from './components/Login/Login';
+import { RegisterPicker } from './components/Register/RegisterPicker'
+import { PickerCancel } from './components/Cancel/PickerCancel';
 
 function App() {
   const [user, setUser] = useState(null) //No hubo nada establecido(ningún valoor)
@@ -39,6 +41,12 @@ function App() {
           </Route>
           <Route path='/details'>
             <DetailOrder />
+          </Route>
+          <Route path='/registerpicker'>
+            <RegisterPicker user={user}/>
+          </Route>
+          <Route path='/cancelation'>
+            <PickerCancel />
           </Route>
         </Switch>
       </div>

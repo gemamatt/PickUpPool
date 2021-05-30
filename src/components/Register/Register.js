@@ -2,12 +2,13 @@ import React, {useState} from 'react';
 import '../../components/Register/Register.css'
 import { auth } from '../../firebase'
 import Logo from '../../LogoPickUp.png'
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 import arrow from '../../assets/back.png';
 
-export const Register = () => {
 
-    const[email, setEmail] = useState('')
+export const Register = (props) => {
+
+        const[email, setEmail] = useState('')
         const[password, setPassword] = useState('')
         const[msgError, setMsgError] = useState(null)
         const registerUser = (e) =>{
@@ -23,6 +24,11 @@ export const Register = () => {
                 }
             })
         }
+
+        if(!props.user){ //Si es falso el usuario lo redirijera a otra parte
+            return <Redirect to="/principal" />
+        }
+
     return (
         <div className='register'>
             <h1 className='title'>PickUp PooL</h1>

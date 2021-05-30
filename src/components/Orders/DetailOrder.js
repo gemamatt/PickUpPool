@@ -1,15 +1,15 @@
 import './DetailOrder.css';
 import Navbar from '../Navbar/Navbar'
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
 import OneOrder from './OneOrder'
 
 const DetailOrder =()=>{
     
-    let history = useHistory();
+    // let history = useHistory();
 
-    function handleClick() {
-        history.push('/orders');        
-    }
+    // function handleClick() {
+    //     history.push('/orders');        
+    // }
 
     return(
         <div className='viewPrincipal'>
