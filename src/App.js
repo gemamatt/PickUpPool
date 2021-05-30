@@ -29,7 +29,7 @@ function App() {
             <Principal user={user}/>
           </Route>
           <Route path='/register'>
-            <Register />
+            <Register user={user}/>
           </Route>
           <Route path='/orders'>
             <UserOrders user={user}/>
