@@ -3,10 +3,12 @@ import {auth} from './firebase';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import UserOrders from './components/Orders/UserOrders';
+import PickerOrders from './components/Orders/PickerOrders';
 import Principal from './components/Principal/Principal';
 import DetailOrder from './components/Orders/DetailOrder'
 import { Register } from './components/Register/Register';
 import { Login } from './components/Login/Login';
+import PickerQualification from './components/Qualification/PickerQualification';
 
 function App() {
   const [user, setUser] = useState(null) //No hubo nada establecido(ningún valoor)
@@ -29,16 +31,24 @@ function App() {
             <Principal user={user}/>
           </Route>
           <Route path='/register'>
-            <Register />
+            <Register user={user}/>
           </Route>
           <Route path='/orders'>
             <UserOrders user={user}/>
           </Route>
+
+          <Route path='/deliveries'>
+            <PickerOrders user={user}/>
+          </Route>
+
           <Route exact path='/'>
             <Login user={user} />
           </Route>
           <Route path='/details'>
             <DetailOrder />
+          </Route>
+          <Route path='/qualify'>
+            <PickerQualification/>
           </Route>
         </Switch>
       </div>

@@ -18,5 +18,8 @@ const db = fb.firestore();
 const collectionOrders = () => {
     return db.collection('orders').get();
 }
+const collectionDeliveries = () => {
+    return db.collection('deliveries').get();
+}
 
-export {auth, db, collectionOrders}
+export {auth, db, collectionOrders, collectionDeliveries}
