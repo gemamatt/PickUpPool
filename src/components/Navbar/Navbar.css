@@ -5,9 +5,15 @@
 }
 
 .return{
-    width: 50px;
+    width: 40px;
     margin: 15px;
     position: absolute;
-    left: 7.22%;
-    right: 84.44%;
+    left: 2%;
+}
+
+.navbar p{
+    color: white;
+    right: 10%;
+    position: absolute;
+    margin: 12.5px 0;
 }

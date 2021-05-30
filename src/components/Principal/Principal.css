@@ -4,7 +4,7 @@
 
 .container{
     height: 136px;
-    margin: 30px 30px;
+    margin: 25px;
     background: #FFFFFF;
     border: 2px solid #717786;
     box-sizing: border-box;
@@ -12,12 +12,13 @@
     border-radius: 20px;
 }
 
-h1{
+.viewPrincipal h1{
+    margin-top: 5px;
     margin-bottom: 0;
     color: #142032 ;
 }
 
-h3{
+.viewPrincipal h3{
     margin-top: 0;
     font-weight: normal;
     color: #F71963;

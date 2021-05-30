@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { collectionOrders } from '../../firebase'
-import './UserOrders.css'
+import { collectionDeliveries } from '../../firebase'
+import './Deliveries.css'
 import { useHistory } from 'react-router-dom'
 
-function OneOrder() {
+function Deliveries() {
     let history = useHistory();
 
     function handleClick() {
@@ -13,7 +13,7 @@ function OneOrder() {
 
     React.useEffect(() => {
         const getNotes = async () => {
-            const { docs } = await collectionOrders()
+            const { docs } = await collectionDeliveries()
             const newArray = docs.map((item) => ({ id: item.id, ...item.data() }))
             setCreate(newArray)
         }
@@ -28,13 +28,16 @@ function OneOrder() {
                     createN.map((item) => (
                         
                         <span className="ordersBoy" key={item.id}>
-                            <p>Id: {item.numOrden}</p>
-                            <p>Tamaño: {item.tamaño}</p>
+                            <p>Núm de orden: {item.numOrden}</p>
+                            <p>Usuario: {item.cliente}</p>
+                            <p>Telefono: {item.telefono}</p>
+                            <p>Fecha de entrega {item.entrega}</p>
+                            <p>Ubicación: {item.ubicación}</p>
                         </span>
-                                    
+                            
                     ))
                     ) : (
-                        <span>No existen ordenes</span>
+                        <span>Aún no hay nuevas entregas</span>
                         )
             }
             </div>
@@ -42,4 +45,4 @@ function OneOrder() {
     );
 }
 
-export default OneOrder;
+export default Deliveries;

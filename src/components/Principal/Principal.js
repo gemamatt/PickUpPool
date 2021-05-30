@@ -1,8 +1,8 @@
 import './Principal.css';
 import Navbar from '../Navbar/Navbar'
-import { useHistory } from 'react-router-dom'
+import { Redirect, useHistory } from 'react-router-dom'
 
-const Principal =()=>{
+const Principal =(props)=>{
     
     let history = useHistory();
 
@@ -10,6 +10,9 @@ const Principal =()=>{
         history.push('/orders');        
     }
 
+    if(!props.user){
+        return <Redirect to="/"/>
+    }
 
     return(
         <div className='viewPrincipal'>
