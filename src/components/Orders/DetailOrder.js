@@ -5,12 +5,17 @@ import swal from 'sweetalert';
 import arrow from '../../assets/back.png';
 
 
+
 const DetailOrder =()=>{
 
     let history = useHistory();
 
     function handleClick() {
         history.push('/orders');
+    }
+
+    function handleClic() {
+        history.push('/pickerProfile');
     }
 
     const alertSuccess =()=>{
@@ -23,7 +28,7 @@ const DetailOrder =()=>{
             <img onClick={handleClick} src={arrow} className="return" alt="return" />
             <div className='conteiner-userorders'>
                 <div className="my-orders">
-                    <h2>Mis pedidos</h2>
+                    <p>Mis pedidos</p>
                 </div>
                 <section>   
                     <form className="container-orders" onSubmit={()=>alertSuccess()}>
@@ -68,7 +73,7 @@ const DetailOrder =()=>{
                             </select>
                         </div>
                         <div className='confirm'>
-                            <input type="submit" value="Confirmar Pickeo" />
+                            <input type="submit" value="Confirmar Pickeo" onClick={handleClic} />
                         </div>
                     </form>
                 </section>
