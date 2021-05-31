@@ -40,7 +40,7 @@ export const Register = (props) => {
     }
     
     const alertSuccess =()=>{
-        swal('Usurio registrado con exito', 'success');
+        swal('Registro exitoso', 'Bienvenido a PickUp Pool', 'success');
     }
 
     if(props.user){ //Si es falso el usuario lo redirijera a otra parte

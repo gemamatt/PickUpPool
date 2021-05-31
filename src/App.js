@@ -8,11 +8,14 @@ import Principal from './components/Principal/Principal';
 import DetailOrder from './components/Orders/DetailOrder'
 import { Register } from './components/Register/Register';
 import { Login } from './components/Login/Login';
+import { RegisterPicker } from './components/Register/RegisterPicker'
+import { PickerCancel } from './components/Cancel/PickerCancel';
 import PickerQualification from './components/Qualification/PickerQualification';
 import { PickerProfile } from './components/Profile/PickerProfile';
 import { FormNewPicker } from './components/FormNewPicker/FormNewPicker';
 
 function App() {
+
   const [user, setUser] = useState(null) //No hubo nada establecido(ningún valoor)
   useEffect(() => { //Estado del servidor
     auth.onAuthStateChanged((user) => { //user del servidor
@@ -23,6 +26,7 @@ function App() {
       }
     })
   }, [])
+  
   return (
     <>
     {user !== null ? (
@@ -50,6 +54,12 @@ function App() {
           <Route path='/details'>
             <DetailOrder />
           </Route>
+          <Route path='/registerpicker'>
+            <RegisterPicker user={user}/>
+          </Route>
+          <Route path='/cancelation'>
+            <PickerCancel />
+          </Route>
           <Route path='/qualify'>
             <PickerQualification user={user}/>
           </Route>
@@ -63,4 +73,5 @@ function App() {
     </>
   );
 }
+
 export default App;
