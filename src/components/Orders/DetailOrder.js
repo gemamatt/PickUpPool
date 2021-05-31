@@ -1,5 +1,7 @@
+import { useHistory } from 'react-router-dom'
 import './DetailOrder.css';
 import Navbar from '../Navbar/Navbar'
+<<<<<<< HEAD
 // import { useHistory } from 'react-router-dom'
 import OneOrder from './OneOrder'
 
@@ -10,22 +12,42 @@ const DetailOrder =()=>{
     // function handleClick() {
     //     history.push('/orders');        
     // }
+=======
+import swal from 'sweetalert2-react';
+import arrow from '../../assets/back.png';
+
+
+
+const DetailOrder =()=>{
+
+    let history = useHistory();
+
+    function handleClick() {
+        history.push('/orders');
+    }
+
+    function handleClic() {
+        history.push('/pickerProfile');
+    }
+
+    const alertSuccess =()=>{
+        swal('Pedido programado','¡La información de tu entrega ha sido guardada exitosamente!', 'success');
+    }
+>>>>>>> 4d1d4fc42302389ad3e0ead0248a7bb0599ca3bc
 
     return(
         <div className='viewPrincipal'>
             <Navbar/>
+            <img onClick={handleClick} src={arrow} className="return" alt="return" />
             <div className='conteiner-userorders'>
                 <div className="my-orders">
-                    <h2>Mis pedidos</h2>
+                    <p>Mis pedidos</p>
                 </div>
-                <section>
-                    <div className="conteiner-orders selector">
-                        <div>
-                            <OneOrder />
-                        </div>
+                <section>   
+                    <form className="container-orders" onSubmit={()=>alertSuccess()}>
                         <div className='hours'>
                             <p>Hora de entrega:</p>
-                            <select>
+                            <select required>
                                 <option></option>
                                 <option >10:00</option>
                                 <option >10:30</option>
@@ -50,26 +72,23 @@ const DetailOrder =()=>{
                         </div>
                         <div className='delivery-point'>
                             <p>Punto de entrega:</p>
-                            <select>
+                            <select required>
                                 <option></option>
                                 <option >Ángel de la Independencia</option>
-                                <option >Monumento a la Raza</option>
-                                <option >Zócalo</option>
-                                <option >Plaza Garibaldi</option>
-                                <option >Templo Mayor</option>
-                                <option >Plaza de las Tres Culturas</option>
-                                <option >Monumento a la Revolución</option>
-                                <option >Torre Latino</option>
                                 <option >Hemiciclo a Benito Juárez</option>
-                                <option >Kiosco Morisco</option>
                                 <option >Palacio de Bellas Artes</option>
                                 <option >Palacio de Correos</option>
+                                <option >Plaza Garibaldi</option>
+                                <option >Monumento a la Revolución</option>
+                                <option >Templo Mayor</option>
+                                <option >Torre Latino</option>
+                                <option >Zócalo</option>
                             </select>
                         </div>
                         <div className='confirm'>
-                            <button>Confirmar Pickeo</button>
+                            <input type="submit" value="Confirmar Pickeo" onClick={handleClic} />
                         </div>
-                    </div>
+                    </form>
                 </section>
             </div>
         </div>

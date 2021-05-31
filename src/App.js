@@ -10,6 +10,9 @@ import { Register } from './components/Register/Register';
 import { Login } from './components/Login/Login';
 import { RegisterPicker } from './components/Register/RegisterPicker'
 import { PickerCancel } from './components/Cancel/PickerCancel';
+import PickerQualification from './components/Qualification/PickerQualification';
+import { PickerProfile } from './components/Profile/PickerProfile';
+import { FormNewPicker } from './components/FormNewPicker/FormNewPicker';
 
 function App() {
   const [user, setUser] = useState(null) //No hubo nada establecido(ningún valoor)
@@ -22,7 +25,8 @@ function App() {
       }
     })
   }, [])
-  return (
+
+  return(
     <>
     {user !== null ? (
     <Router>
@@ -32,7 +36,7 @@ function App() {
             <Principal user={user}/>
           </Route>
           <Route path='/register'>
-            <Register />
+            <Register user={user}/>
           </Route>
           <Route path='/orders'>
             <UserOrders user={user}/>
@@ -40,7 +44,9 @@ function App() {
           <Route path='/deliveries'>
             <PickerOrders user={user}/>
           </Route>
-
+          <Route path='/pickerProfile'>
+            <PickerProfile user={user}/>
+          </Route>
           <Route exact path='/'>
             <Login user={user} />
           </Route>
@@ -53,6 +59,12 @@ function App() {
           <Route path='/cancelation'>
             <PickerCancel />
           </Route>
+          <Route path='/qualify'>
+            <PickerQualification user={user}/>
+          </Route>
+          <Route path='/newPicker'>
+            <FormNewPicker user={user} />
+          </Route>
         </Switch>
       </div>
     </Router>
@@ -60,5 +72,5 @@ function App() {
     </>
   );
 }
-export default App;
 
+export default App;
