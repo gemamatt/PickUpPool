@@ -27,6 +27,7 @@ export const RegisterPicker = (props) => {
             console.log('Datos no guardados', error)
         }
     };
+
     return(
         <div className="registerPicker">
             <h1 className='titlePicker'>REGISTRATE COMO PICKER</h1>
