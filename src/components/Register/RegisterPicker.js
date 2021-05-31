@@ -1,12 +1,15 @@
 import React, { useState} from 'react';
 import { db } from '../../firebase';
 import './RegisterPicker.css'
+
 export const RegisterPicker = (props) => {
+
     const[name, setName] = useState('');
     const[ine, setIne] = useState('');
     const[placas, setPlacas] = useState('');
     const[phone, setPhone] = useState('');
     console.log(props.user.uid);
+    
     const registerPick = async (e) =>{
         e.prevetDefault();
         const newPicker = {

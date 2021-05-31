@@ -37,7 +37,6 @@ function App() {
           <Route path='/orders'>
             <UserOrders user={user}/>
           </Route>
-
           <Route path='/deliveries'>
             <PickerOrders user={user}/>
           </Route>
