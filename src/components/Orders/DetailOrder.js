@@ -25,14 +25,17 @@ const DetailOrder =()=>{
             places: places
         };
         try{
-            await db.collection('orders').add(saveOrder);
+            await db.collection('schedule').add(saveOrder);
             swal('Pedido programado','¡La información de tu entrega ha sido guardada exitosamente!', 'success');
+            history.push('/pickerProfile');
             console.log('Programando entrega');
         }
         catch(error){
             console.log('Datos no guardados', error);
         }
     };
+
+
 
     return(
         <div className='viewPrincipal'>
@@ -43,7 +46,7 @@ const DetailOrder =()=>{
                     <h2>Mis pedidos</h2>
                 </div>
                 <section> 
-                    <form className="container-orders" >
+                    <form className="container-orders" onSubmit={scheduleOrder}>
                         <div className='hours'>
                             <p>Hora de entrega:</p>
                             <select value={hours} onChange={(e) => {setHours(e.target.value)}} required>
@@ -85,7 +88,7 @@ const DetailOrder =()=>{
                             </select>
                         </div>
                         <div className='confirm'>
-                            <input type="submit" value="Confirmar Pickeo"  onClick={scheduleOrder} />
+                            <input type="submit" value="Confirmar Pickeo" />
                         </div>
                     </form>
                 </section>
