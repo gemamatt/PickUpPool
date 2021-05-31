@@ -1,6 +1,8 @@
 import React, { useState} from 'react';
 import { db } from '../../firebase';
 import './RegisterPicker.css'
+
+
 export const RegisterPicker = (props) => {
     const[name, setName] = useState('');
     const[ine, setIne] = useState('');
