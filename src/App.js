@@ -13,6 +13,7 @@ import { PickerCancel } from './components/Cancel/PickerCancel';
 import PickerQualification from './components/Qualification/PickerQualification';
 import { PickerProfile } from './components/Profile/PickerProfile';
 import { FormNewPicker } from './components/FormNewPicker/FormNewPicker';
+import OrderTracking from './components/OrderTracking/OrderTracking'
 
 function App() {
 
@@ -47,6 +48,9 @@ function App() {
           </Route>
           <Route path='/pickerProfile'>
             <PickerProfile user={user}/>
+          </Route>
+          <Route path='/tracking'>
+            <OrderTracking />
           </Route>
           <Route exact path='/'>
             <Login user={user} />
