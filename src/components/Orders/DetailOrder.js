@@ -33,29 +33,6 @@ const DetailOrder =()=>{
             console.log('Datos no guardados', error);
         }
     };
-    
-    // const initialStateValues = {
-    //     hours: '',
-    //     places: '',
-    // };
-
-    // const [values, setValues] = useState(initialStateValues);
-
-    // const handleSelectChange = e =>{
-    //     const {name, value} = e.target;
-    //     console.log(name, value);
-    //     setValues({...values, [name]: value})
-    // }
-
-    // const scheduleOrder = async (e) => {
-    //     await db.collection('schedule').add(initialStateValues);
-    //     // await db.collection('orders').doc().set(object)
-    // }
-
-    // const alertSuccess = (e) =>{
-    //     e.target.reset();
-    //     swal('Pedido programado','¡La información de tu entrega ha sido guardada exitosamente!', 'success');
-    // }
 
     return(
         <div className='viewPrincipal'>
