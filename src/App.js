@@ -6,6 +6,7 @@ import UserOrders from './components/Orders/UserOrders';
 import Principal from './components/Principal/Principal';
 import { Register } from './components/Register/Register';
 import { Login } from './components/Login/Login';
+import OrderTracking from './components/OrderTracking/OrderTracking'
 
 function App() {
   const [user, setUser] = useState(null) //No hubo nada establecido(ningún valoor)
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path='/orders'>
             <UserOrders />
+          </Route>
+          <Route path='/tracking'>
+            <OrderTracking />
           </Route>
           <Route exact path='/'>
             <Login user={user} />
