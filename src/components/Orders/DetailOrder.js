@@ -7,6 +7,7 @@ import arrow from '../../assets/back.png';
 import { db } from '../../firebase';
 
 
+
 const DetailOrder =()=>{
 
     let history = useHistory();
@@ -43,7 +44,7 @@ const DetailOrder =()=>{
             <img onClick={handleClick} src={arrow} className="return" alt="return" />
             <div className='conteiner-userorders'>
                 <div className="my-orders">
-                    <h2>Mis pedidos</h2>
+                    <p>Mis pedidos</p>
                 </div>
                 <section> 
                     <form className="container-orders" onSubmit={scheduleOrder}>
@@ -88,7 +89,7 @@ const DetailOrder =()=>{
                             </select>
                         </div>
                         <div className='confirm'>
-                            <input type="submit" value="Confirmar Pickeo" />
+                            <input type="submit" value="Confirmar Pickeo"/>
                         </div>
                     </form>
                 </section>
