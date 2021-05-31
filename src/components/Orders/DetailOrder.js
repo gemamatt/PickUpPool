@@ -1,7 +1,7 @@
 import { useHistory } from 'react-router-dom'
 import './DetailOrder.css';
 import Navbar from '../Navbar/Navbar'
-import swal from 'sweetalert';
+import swal from 'sweetalert2-react';
 import arrow from '../../assets/back.png';
 
 
